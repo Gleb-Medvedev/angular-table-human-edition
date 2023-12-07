@@ -1,1 +1,29 @@
-/* You can add global styles to this file, and also import other style files */
+.table-actions {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    padding: 20px;
+    margin-bottom: 24px;
+    background-color: #424324;
+}
+
+.table-row {
+    background-color: #cc4545;
+    padding: 20px;
+    display: flex;
+    border: 2px solid black;
+
+    &:not(:last-child) {
+        margin-bottom: 16px;
+    }
+}
+
+.table-cell {
+    flex: 1 1 auto;
+    padding: 4px;
+    border: 1px solid greenyellow;
+    
+    &:not(:last-child) {
+        margin-right: 12px;
+    }
+}
