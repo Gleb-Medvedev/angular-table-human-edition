@@ -1,15 +1,20 @@
-<div class="table-actions">
-  <select class="table-actions__select" [(ngModel)]="selectValue">
-    <option value="1">1</option>
-    <option value="2">2</option>
-    <option value="3">3</option>
-  </select>
-  <button class="table-actions__btn" type="button" (click)="addElem()">Добавить элемент!</button>
-</div>
-<ng-container *ngFor="let row of rows">
-  <div class="table-row">
-    <ng-container *ngFor="let cell of row">
-      <div class="table-cell">YACHEYKA!</div>
+<div class="table">
+  <div class="table-actions">
+    <select class="table-actions__select" [(ngModel)]="selectValue">
+      <option value="">Выберите значение: </option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+    </select>
+    <button class="table-actions__btn" type="button" (click)="addElem()">Добавить элемент!</button>
+  </div>
+  <div class="table-body">
+    <ng-container *ngFor="let row of rows">
+      <div class="table-body__row">
+        <ng-container *ngFor="let cell of row">
+          <div class="table-body__cell">CELL</div>
+        </ng-container>
+      </div>
     </ng-container>
   </div>
-</ng-container>
+</div>

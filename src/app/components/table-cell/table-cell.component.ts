@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { AppComponent } from 'src/app/app.component';
 
 @Component({
   selector: 'app-table-cell',
@@ -6,7 +7,4 @@ import { Component } from '@angular/core';
   styleUrls: ['./table-cell.component.scss']
 })
 export class TableCellComponent {
-
 }
-
-export const newCell = new TableCellComponent();

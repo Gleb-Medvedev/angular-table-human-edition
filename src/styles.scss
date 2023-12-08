@@ -1,29 +1,69 @@
-.table-actions {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 24px;
-    padding: 20px;
-    margin-bottom: 24px;
-    background-color: #424324;
-}
-
-.table-row {
-    background-color: #cc4545;
-    padding: 20px;
-    display: flex;
-    border: 2px solid black;
-
-    &:not(:last-child) {
-        margin-bottom: 16px;
-    }
-}
-
-.table-cell {
-    flex: 1 1 auto;
-    padding: 4px;
-    border: 1px solid greenyellow;
+.table {
+    &-actions {
+        box-sizing: border-box;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+        padding: 20px;
+        margin-bottom: 24px;
+        background-color: #000000;
     
-    &:not(:last-child) {
-        margin-right: 12px;
+        &__select,
+        &__btn {
+            padding: 6px 12px;
+            background-color: #fff;
+            text-align: center;
+            font-weight: 600;
+            border: none;
+            border-radius: 12px;
+            outline: none;
+            cursor: pointer;
+            transition: all ease-out 250ms;
+            font-size: 16px;
+            text-shadow: .5px 1px rgb(153, 153, 153);
+
+            &:hover {
+                background-color: brown;
+                transform: translateY(-4px);
+            }
+        }
+    }
+    
+    &-body {
+        padding: 0 20px;
+        margin-top: 94px;
+
+        &__row {
+            padding: 20px;
+            display: flex;
+            border: 2px solid black;
+            border-radius: 12px;
+
+            &:not(:last-child) {
+                margin-bottom: 16px;
+            }
+
+            &:nth-child(odd) {
+                background-color: #0000005d;
+            }
+        }
+        
+        &__cell {
+            flex: 1 1 auto;
+            padding: 8px;
+            border: 2px solid rgb(0, 0, 0);
+            text-align: center;
+            border-radius: 12px;
+            background-color: #fff;
+            pointer-events: none;
+            
+            &:not(:last-child) {
+                margin-right: 12px;
+            }
+        }
     }
 }
